@@ -11,9 +11,10 @@ body, #root {
     display: flex;
     flex: 1;
     flex-direction: column;
-    background-image: url("https://wallpapercave.com/wp/XHo2Hub.jpg");
+    /* background-image: url("https://wallpapercave.com/wp/XHo2Hub.jpg"); */
     background-repeat: no-repeat;
     background-size: cover; 
+    background: black;
 }
 
 .rout-container{
@@ -217,4 +218,44 @@ body, #root {
     .footer-transparent {
         bottom: 10px;
     }
+}
+
+.about-card-slider-item blockquote h2 {
+    color: #ffffff;
+    font-size: 35px;
+    text-transform: none;
+    padding-left: 5px;
+}
+
+.about-card-slider { 
+    position: inherit;
+    padding-bottom: 100px
+}
+
+.about-card-slider-sm { 
+    min-width: 200px;
+    max-width: 600px
+}
+
+.about-card-slider-lg { 
+    width: 600px
+}
+
+.about-card-slider h2{ 
+    line-height: 36px
+}
+
+.about-card-slider-item {
+    padding: 40px
+}
+
+.about-card-slider-item blockquote p {
+    color: rgba(255,255,255, 0.9);
+    font-size: 21px;
+    text-transform: none;
+    line-height: 33px;
+    width: 94%;
+    margin-top: 25px;
+    overflow: hidden;
+    padding-left: 5px;
 }

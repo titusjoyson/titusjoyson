@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from '../components/navbar';
 import Footer from '../components/footer';
 import Home from '../features/home';
+import About from '../features/about';
 import Hidden from '@material-ui/core/Hidden';
 import SpeedDial from '../components/speeddialer';
 
@@ -14,6 +15,7 @@ function AppRouter() {
                 <NavBar />
                 <div className="rout-container">
                     <Route path="/" exact component={Home} />
+                    <Route path="/about" component={About} />
                 </div>
                 <Footer />
             </div>

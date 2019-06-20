@@ -49,7 +49,7 @@ const menuItems = [
 ]
 
 
-function SimpleAppBar() {
+function SimpleAppBar({props}) {
     const classes = useStyles();
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('sm'));

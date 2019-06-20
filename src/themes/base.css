@@ -271,3 +271,16 @@ iframe{width:100%;frameborder:0;display:inline-block;}
 	.noMRight{margin-left:0 !important;}
 	
 
+.fullHeight{
+	height: 100%
+}
+
+.bgBlack{
+	background-color: black;
+}
+
+.grid-center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
