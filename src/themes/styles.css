@@ -15,6 +15,7 @@ body, #root {
     background-repeat: no-repeat;
     background-size: cover; 
     background: black;
+    /* z-index: -110; */
 }
 
 .rout-container{
@@ -259,3 +260,50 @@ body, #root {
     overflow: hidden;
     padding-left: 5px;
 }
+
+.main-text-color {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.absolute-full-view {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none
+}
+
+.moon {
+    align-self: flex-start;
+    margin-top: 160px;
+    margin-left: 80px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: white;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+
+    -webkit-animation: neon1 5.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 5.5s ease-in-out infinite alternate;
+    animation: neon1 5.5s ease-in-out infinite alternate;
+}
+
+.moon :hover {
+    color: #fff;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+}
+
+@keyframes neon1 {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
+    }
+  }

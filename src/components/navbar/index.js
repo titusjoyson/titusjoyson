@@ -17,6 +17,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from "react-router-dom";
 
 import './styles.css';
 
@@ -42,14 +43,14 @@ const useStyles = makeStyles({
 });
 
 const menuItems = [
-    { "text": 'Home' },
-    { "text": 'About' },
-    { "text": 'Projects' },
-    { "text": 'Blog' },
+    { "text": 'Home', 'path': '/' },
+    { "text": 'About', 'path': 'about' },
+    // { "text": 'Projects' },
+    // { "text": 'Blog' },
 ]
 
 
-function SimpleAppBar({props}) {
+function SimpleAppBar({ props }) {
     const classes = useStyles();
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('sm'));
@@ -74,9 +75,11 @@ function SimpleAppBar({props}) {
         >
             <List>
                 {menuItems.map((item, index) => (
-                    <ListItem button key={item.text}>
-                        <ListItemText primary={item.text} />
-                    </ListItem>
+                    <Link to={item.path}>
+                        <ListItem a key={item.text}>
+                            <ListItemText primary={item.text} classes={{"primary":"main-text-color"}}/>
+                        </ListItem>
+                    </Link>
                 ))}
             </List>
             <Divider />
@@ -94,7 +97,14 @@ function SimpleAppBar({props}) {
                         <div>
                             <Hidden smDown>
                                 {menuItems.map((item, index) => (
-                                    <Button color="inherit" className={classes.button}>{item.text}</Button>
+                                    <Link to={item.path}>
+                                        <Button
+                                            color="rgba(0, 0, 0, 0.87);"
+                                            className={classes.button}
+                                        >
+                                            {item.text}
+                                        </Button>
+                                    </Link>
                                 ))}
                             </Hidden>
                             <Hidden mdUp>

@@ -4,15 +4,39 @@ import Slider from "react-slick";
 import Icon from '@material-ui/core/Icon';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Tilt from 'react-tilt'
+
+class Div extends React.Component {
+    render() {
+        return 
+    }
+}
+
+class WraperView extends React.Component {
+    render(){
+        if (this.props.div){
+            return (
+                <div className={this.props.className}>
+                    {this.props.children}
+                </div>
+            )
+        }else{
+            return (
+                <Tilt className={this.props.className} options={this.props.options}>
+                    {this.props.children}
+                </Tilt>
+            )
+        }
+    }
+}
 
 
 export default function HomeCard() {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('xm'));
-
     return (
-        <div className="home-card-container">
-            <Grid container spacing={0} direction={matches?"column":"row"} className="home-card-container-grid">
+        <WraperView className="home-card-container" options={{ max: 15, scale: 1.05 }} div={matches ? true :  false}>
+            <Grid container spacing={0} direction={matches ? "column" : "row"} className="home-card-container-grid">
                 <Grid item xs={12} sm={6} md={5} className="home-card-left-item">
                     <HomeImageCard />
                 </Grid>
@@ -20,7 +44,7 @@ export default function HomeCard() {
                     <HomeCardContent />
                 </Grid>
             </Grid>
-        </div>
+        </WraperView>
     )
 }
 
