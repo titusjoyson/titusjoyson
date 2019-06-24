@@ -2,9 +2,12 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Slider from "react-slick";
 import Icon from '@material-ui/core/Icon';
+import { Link } from "react-router-dom";
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Tilt from 'react-tilt'
+import config from '../../config';
+
 
 class Div extends React.Component {
     render() {
@@ -53,9 +56,9 @@ class HomeImageCard extends React.Component {
         return (
             <div className="home-card-image">
                 <div className="content-inner">
-                    <h1>Titus Joyson<span>Professional Photographer</span></h1>
+                    <h1>Titus Joyson<span>Professional Software Engineer</span></h1>
                     <div>
-                        <a href="contact_alt.html" className="link link-light">Need some shots</a>
+                        <Link to={"/about"} className="link link-light">Like to Know more</Link>
                     </div>
                 </div>
             </div>

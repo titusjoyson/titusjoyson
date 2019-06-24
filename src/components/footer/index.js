@@ -3,6 +3,8 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import SpeedDial from '../speeddialer';
+import config from '../../config';
+
 
 export default class Footer extends React.Component {
 
@@ -23,10 +25,10 @@ export default class Footer extends React.Component {
                     <Hidden smDown>
                         <div className="eight columns tRight">
                             <ul className="socials-footer socials">
-                                <li><a href="#">GitHub</a></li>
-                                <li><a href="#">LinkedIn</a></li>
-                                <li><a href="#">Instagram</a></li>
-                                <li><a href="#">Twitter</a></li>
+                                <li><a href={config.GITHUB_PROFILE} target="_blank">GitHub</a></li>
+                                <li><a href={config.LINKIDIN_PROFILE} target="_blank">LinkedIn</a></li>
+                                {/* <li><a href="#" target="__blank">Instagram</a></li> */}
+                                <li><a href={config.TWITTER_PROFILE} target="_blank">Twitter</a></li>
                             </ul>
                         </div>
                     </Hidden>

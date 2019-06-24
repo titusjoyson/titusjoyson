@@ -8,6 +8,7 @@ import Hidden from '@material-ui/core/Hidden';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import ParticleView from '../../components/particle';
+import context from './content';
 
 
 const useStyles = makeStyles({
@@ -33,7 +34,7 @@ export default function About() {
         >
             <Grid container spacing={0} direction={matches ? "column" : "row"} className="fullHeight">
                 <Grid xs={12} sm={12} md={12} className="grid-center">
-                    <TopDownMainCard extClassName={extClassName}/>
+                    <TopDownMainCard extClassName={extClassName} sm={!matches}/>
                 </Grid>
                 {
                     matches? (
@@ -65,19 +66,23 @@ class TopDownMainCard extends React.Component {
         super()
         this.data = [
             {
-                "title": "Annie Leibovitz",
-                "quote": "The camera makes you forget you’re there. It’s not like you are hiding but you forget, you are just looking so much"
+                "title": "About Me",
+                "quote": context.aboutMe,
             },
             {
-                "title": "Annie Leibovitz",
-                "quote": "The camera makes you forget you’re there. It’s not like you are hiding but you forget, you are just looking so much"
+                "title": "Get In Touch",
+                "quote": context.getInTouch
             }
         ]
     }
 
     _renderCard = (data) => {
+        let containerClass = "about-card-slider-item";
+        if(this.props.sm == true){
+            containerClass += " about-card-slider-item-sm"
+        }
         return (
-            <div className="about-card-slider-item">
+            <div className={containerClass}>
                 <blockquote>
                     <h2>{data.title}</h2>
                     <p>{data.quote}</p>
@@ -88,15 +93,15 @@ class TopDownMainCard extends React.Component {
 
     render() {
         var settings = {
-            dots: false,
+            dots: true,
             infinite: true,
             speed: 1000,
             slidesToShow: 1,
             slidesToScroll: 1,
             totalSlides: this.data.length,
             arrows: false,
-            autoplay: true,
-            vertical: true
+            autoplay: false,
+            vertical: false
         };
         const extClassName = this.props.extClassName;
         return (

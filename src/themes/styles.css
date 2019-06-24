@@ -225,7 +225,14 @@ body, #root {
     color: #ffffff;
     font-size: 35px;
     text-transform: none;
-    padding-left: 5px;
+    padding-left: 2px;
+}
+
+.about-card-slider-item-sm blockquote h2 {
+    color: #ffffff;
+    font-size: 26px;
+    text-transform: none;
+    padding-left: 2px;
 }
 
 .about-card-slider { 
@@ -235,7 +242,8 @@ body, #root {
 
 .about-card-slider-sm { 
     min-width: 200px;
-    max-width: 600px
+    max-width: 350px;
+    padding-bottom: 80px
 }
 
 .about-card-slider-lg { 
@@ -247,7 +255,7 @@ body, #root {
 }
 
 .about-card-slider-item {
-    padding: 40px
+    padding: 6px
 }
 
 .about-card-slider-item blockquote p {
@@ -255,6 +263,17 @@ body, #root {
     font-size: 21px;
     text-transform: none;
     line-height: 33px;
+    width: 94%;
+    margin-top: 25px;
+    overflow: hidden;
+    padding-left: 5px;
+}
+
+.about-card-slider-item-sm blockquote p {
+    color: rgba(255,255,255, 0.9);
+    font-size: 16px;
+    text-transform: none;
+    line-height: 30px;
     width: 94%;
     margin-top: 25px;
     overflow: hidden;
@@ -307,3 +326,16 @@ body, #root {
       box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff;
     }
   }
+
+.slick-dots li button:before {
+    font-size: 10px;
+    color: #fff;
+    opacity: 0.10;
+}
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+/* .slick-dots {
+    bottom: -18px;
+} */

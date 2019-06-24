@@ -7,6 +7,8 @@ import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
 import Icon from '@material-ui/core/Icon';
+import config from '../../config';
+import { withRouter } from 'react-router-dom';
 
 
 const styles = theme => ({
@@ -40,10 +42,10 @@ const styles = theme => ({
 });
 
 const actions = [
-    { icon: <Icon className={"fa fa-github"} />, name: 'Github' },
-    { icon: <Icon className={"fa fa-linkedin"} />, name: 'LinkedIn' },
-    { icon: <Icon className={"fa fa-twitter"} />, name: 'Twitter' },
-    { icon: <Icon className={"fa fa-instagram"} />, name: 'Instagram' },
+    { icon: <Icon className={"fa fa-github"} />, name: 'Github', link: config.GITHUB_PROFILE },
+    { icon: <Icon className={"fa fa-linkedin"} />, name: 'LinkedIn', link: config.LINKIDIN_PROFILE },
+    { icon: <Icon className={"fa fa-twitter"} />, name: 'Twitter', link: config.TWITTER_PROFILE },
+    // { icon: <Icon className={"fa fa-instagram"} />, name: 'Instagram' },
 ];
 
 class SpeedDials extends React.Component {
@@ -53,7 +55,17 @@ class SpeedDials extends React.Component {
         hidden: false,
     };
 
-    handleClick = () => {
+    handleAcClick = (link = null) => {
+        this.setState(state => ({
+            open: !state.open,
+        }));
+        if (link != null) {
+            var win = window.open(link, '_blank');
+            win.focus();
+        }
+    };
+
+    handleClick = (link = null) => {
         this.setState(state => ({
             open: !state.open,
         }));
@@ -97,7 +109,7 @@ class SpeedDials extends React.Component {
                         ariaLabel="SpeedDial example"
                         className={speedDialClassName}
                         hidden={hidden}
-                        icon={<SpeedDialIcon icon={<Icon>share</Icon>}/>}
+                        icon={<SpeedDialIcon icon={<Icon>share</Icon>} />}
                         onBlur={this.handleClose}
                         onClick={this.handleClick}
                         onClose={this.handleClose}
@@ -112,7 +124,7 @@ class SpeedDials extends React.Component {
                                 key={action.name}
                                 icon={action.icon}
                                 tooltipTitle={action.name}
-                                onClick={this.handleClick}
+                                onClick={()=>this.handleAcClick(action.link)}
                             />
                         ))}
                     </SpeedDial>
@@ -126,4 +138,5 @@ SpeedDials.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SpeedDials);
+
+export default withRouter(withStyles(styles)(SpeedDials));
