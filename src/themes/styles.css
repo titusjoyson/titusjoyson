@@ -85,6 +85,7 @@ body, #root {
     width: 900px;
     height: 312px;
     margin-right: 20px;
+    margin-bottom: 80px;
     display: flex;
     flex-direction: column
 }

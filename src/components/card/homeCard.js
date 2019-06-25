@@ -56,7 +56,7 @@ class HomeImageCard extends React.Component {
         return (
             <div className="home-card-image">
                 <div className="content-inner">
-                    <h1>Titus Joyson<span>Professional Software Engineer</span></h1>
+                    <h1>Titus Joyson<span>Professional Software Developer</span></h1>
                     <div>
                         <Link to={"/about"} className="link link-light">Like to Know more</Link>
                     </div>
@@ -71,12 +71,16 @@ class HomeCardContent extends React.Component {
         super()
         this.data = [
             {
-                "title": "Annie Leibovitz",
-                "quote": "The camera makes you forget you’re there. It’s not like you are hiding but you forget, you are just looking so much"
+                "title": "Freeman Dyson",
+                "quote": "When I’m working on a problem, I never think about beauty. I think only how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong."
             },
             {
-                "title": "Annie Leibovitz",
-                "quote": "The camera makes you forget you’re there. It’s not like you are hiding but you forget, you are just looking so much"
+                "title": "John F. Woods",
+                "quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."
+            },
+            {
+                "title": "Steve McConnell",
+                "quote": "It’s OK to figure out murder mysteries, but you shouldn’t need to figure out code. You should be able to read it."
             }
         ]
     }

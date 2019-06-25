@@ -5,7 +5,7 @@ import Hidden from '@material-ui/core/Hidden';
 export default function Moon() {
 
     return (
-        <Hidden smDown>
+        <Hidden xsDown>
             <div className={"moon"}>
 
             </div>
