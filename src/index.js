@@ -4,6 +4,7 @@ import './themes/base.css';
 import './themes/styles.css';
 import './themes/media.css';
 import './themes/layout.css';
+import './themes/animatons.css';
 import App from './navigation';
 import * as serviceWorker from './serviceWorker';
 

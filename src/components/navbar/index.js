@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -51,7 +52,9 @@ function SimpleAppBar({ props }) {
             <AppBar position="static" className={classes.appbar}>
                 <Container maxWidth={false} className={classes.navContainer}>
                     <Toolbar className={toolBarStyle}>
+                    <Link to="/">
                         <Typography variant="h6" color="inherit" className={classes.title}>Titus Joyson</Typography>
+                    </Link>
                     </Toolbar>
                 </Container>
             </AppBar>

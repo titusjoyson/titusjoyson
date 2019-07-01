@@ -11,7 +11,7 @@ export default function HomeCardV2() {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
     return (
-        <Grid container spacing={0} direction={matches ? "column" : "row"} className="home-card-container-grid">
+        <Grid container spacing={0} direction={matches ? "column" : "row"} className="home-card-container-grid fadein">
             <Grid item xs={12} sm={12} md={12} lg={8} className="home-card-left-item">
                 <div className="home-intro-container">
                     <h1 className="home-intro-text">

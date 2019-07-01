@@ -9,6 +9,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import config from '../../config';
+
 
 const useStyles = makeStyles({
   card: {
@@ -37,6 +39,13 @@ export default function ProjectCard() {
     const classes = useStyles();
     // const theme = useTheme();
     // const matches = useMediaQuery(theme.breakpoints.up('xm'));
+    const handleAcClick = (link = null) => {
+        if (link != null) {
+            let win = window.open(link, '_blank');
+            win.focus();
+        }
+    };
+
     return (
         <Grid container spacing={0} className="project-card-container-grid">
             <Grid item xs={12} className="project-card-item">
@@ -53,10 +62,20 @@ export default function ProjectCard() {
                         </CardContent>
                     </CardActionArea>
                     <CardActions className={"project-card-item-action"}>
-                        <Button size="small" color="primary" className={classes.white}>
+                        <Button 
+                            size="small" 
+                            color="primary" 
+                            className={classes.white} 
+                            onClick={()=>handleAcClick(config.GITHUB_PROFILE)}
+                        >
                             GitHub
                         </Button>
-                        <Button size="small" color="primary" className={classes.white}>
+                        <Button 
+                            size="small" 
+                            color="primary" 
+                            className={classes.white} 
+                            onClick={()=>handleAcClick(config.LINKIDIN_PROFILE)}
+                        >
                             LinkidIn
                         </Button>
                     </CardActions>

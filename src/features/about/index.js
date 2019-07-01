@@ -23,7 +23,7 @@ export default function AboutV2(props) {
     console.log(props.location)
     return (
         <Grid container spacing={0} direction={matches ? "column" : "row"} className="home-card-container-grid">
-            <Grid item xs={12} sm={12} md={12} lg={8} className="home-card-left-item">
+            <Grid item xs={12} sm={12} md={12} lg={8} className="home-card-left-item fadein">
                 <div className="home-intro-container about-intro-container">
                     <h1 className="home-intro-text about-intro-text">
                         <span>About Me!</span>
