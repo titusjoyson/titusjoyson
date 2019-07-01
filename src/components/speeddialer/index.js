@@ -55,7 +55,12 @@ class SpeedDials extends React.Component {
         hidden: false,
     };
 
+    onStateChange = (state) => {
+        this.props.onStateChange(state)
+    }
+
     handleAcClick = (link = null) => {
+        this.onStateChange(this.state.open)
         this.setState(state => ({
             open: !state.open,
         }));
@@ -66,6 +71,7 @@ class SpeedDials extends React.Component {
     };
 
     handleClick = (link = null) => {
+        this.onStateChange(!this.state.open)
         this.setState(state => ({
             open: !state.open,
         }));
@@ -78,6 +84,7 @@ class SpeedDials extends React.Component {
     };
 
     handleHiddenChange = (event, hidden) => {
+        this.onStateChange(hidden ? false : this.state.open)
         this.setState(state => ({
             hidden,
             // hidden implies !open
@@ -86,10 +93,12 @@ class SpeedDials extends React.Component {
     };
 
     handleClose = () => {
+        this.onStateChange(false)
         this.setState({ open: false });
     };
 
     handleOpen = () => {
+        this.onStateChange(true)
         this.setState({ open: true });
     };
 

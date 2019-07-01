@@ -9,12 +9,6 @@ import Tilt from 'react-tilt'
 import config from '../../config';
 
 
-class Div extends React.Component {
-    render() {
-        return 
-    }
-}
-
 class WraperView extends React.Component {
     render(){
         if (this.props.div){

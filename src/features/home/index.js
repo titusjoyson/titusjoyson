@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import HomeCard from '../../components/card/homeCard';
+import HomeCardV2 from '../../components/card/homeCardV2';
 import Moon from '../../components/card/moon';
 import Particles from 'react-particles-js';
 import { useTheme } from '@material-ui/core/styles';
@@ -29,12 +29,11 @@ export default function Home() {
     const matches = useMediaQuery(theme.breakpoints.up('md'));
     return (
         <Container
-            maxWidth="lg"
+            maxWidth={false}
             className={[classes.container, matches ? classes.containerSpace : classes.containerEnd]}
             style={{ padding: 0 }}
         >
-            <Moon/>
-            <HomeCard />
+            <HomeCardV2/>
         </Container>
     )
 }

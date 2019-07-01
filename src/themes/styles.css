@@ -28,7 +28,8 @@ body, #root {
 }
 
 .home-card-container-grid {
-    flex: 1
+    display: inline;
+    height: 100%;
 }
 
 .home-card-image {
@@ -81,59 +82,45 @@ body, #root {
     color: #f1f1f1;
 }
 
-.home-card-container {
-    width: 900px;
-    height: 312px;
-    margin-right: 20px;
-    margin-bottom: 80px;
-    display: flex;
-    flex-direction: column
-}
-
-@media (max-width: 599px) {
-    .home-card-container {
-        display: flex;
-        flex:1;
-        height: 100%;
-        width: 100vw;
-        margin: 0;
-    }
-}
-
-@media (min-width: 600px) {
-    .home-card-container {
-        width: 550px;
-        height: 312px;
-    }
-}
-
-@media (min-width: 960px) {
-    .home-card-container {
-        width: 750px;
-        height: 312px;
-    }
-}
-
-@media (min-width: 1280px) {
-    .home-card-container {
-        width: 750px;
-        height: 312px;
-    }
-}
-
-@media (min-width: 1920px) {
-    .home-card-container {
-        width: 750px;
-        height: 312px;
-    }
-}   
-
 .home-card-left-item {
     display: inherit;
-    height: inherit
+    justify-content: center;
+    align-items: flex-start
 }
+
 .home-card-right-item {
     display: inline;
+    justify-content: center;
+    align-items: center
+}
+
+.home-intro-container {
+    padding-left: 180px;
+    margin-top: 10%
+}
+
+.home-intro-text {
+    color: white;
+    font-size: 44px;
+    line-height: 56px;
+    text-transform: none;
+}
+
+.home-intro-text-sli-wrap {
+    height: 40px;
+    margin-top: 60px
+}
+
+.home-intro-text-sli-container {
+    height: 80px;
+    pointer-events: none;
+}
+
+.home-intro-text-sli-text {
+    color: #fff;
+    font-size: 32px;
+    line-height: 56px;
+    text-transform: none;
 }
 
 .home-card-slider { 
@@ -161,6 +148,10 @@ body, #root {
     margin-top: 25px;
     overflow: hidden;
     padding-left: 5px;
+}
+
+.socials-footer {
+    margin-bottom: 30px
 }
 
 .socials-footer a {
@@ -340,3 +331,121 @@ body, #root {
 /* .slick-dots {
     bottom: -18px;
 } */
+
+.motion-button-container {
+    height: 50px;
+    width: 50px;
+}
+
+.motion-button {
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 99px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+
+    background-color: transparent;
+    cursor: -webkit-grab; cursor: grab;
+}
+
+.motion-button:hover {
+    background-color: white;
+}
+
+.motion-button:active {
+    background-color: white;
+}
+
+.motion-button-small {
+    bottom: 100px;
+    right: 26px;
+}
+
+.motion-button-large{
+    bottom: 100px;
+    right: 60px;
+}
+
+.motion-button i {
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: -webkit-grab; 
+    cursor: grab;
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;  
+}
+
+.motion-button i:active {
+    cursor: -webkit-grabbing; cursor: grabbing;
+    color: black
+}
+
+.motion-button:hover i {
+    color: black
+}
+
+.project-card-container-grid {
+    max-height: 250px;
+    max-width: 600px;
+    background-color: white;
+
+    margin-top: 150px
+}
+
+.project-card-item{
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+}
+
+.project-card-item-action{
+    margin-top: 5px
+}
+
+.project-card-item-header {
+    padding: 20px;
+}
+
+.project-card-item-header h3 {
+    color: black;
+    font-size: 25px;
+    text-transform: none;
+}
+
+.project-card-item-header hr {
+    margin-top: 20px
+}
+
+.about-intro-container p {
+    color: white;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.about-intro-container a {
+    color: white;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.about-intro-container h3 {
+    color: white;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-transform: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.about-intro-text {
+    margin-bottom: 30px;
+}

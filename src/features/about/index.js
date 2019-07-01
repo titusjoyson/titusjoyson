@@ -1,14 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Slider from "react-slick";
-import Icon from '@material-ui/core/Icon';
-import Hidden from '@material-ui/core/Hidden';
 import { useTheme } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import ParticleView from '../../components/particle';
-import context from './content';
+import config from '../../config';
 
 
 const useStyles = makeStyles({
@@ -21,95 +17,38 @@ const useStyles = makeStyles({
     }
 });
 
-export default function About() {
-    const classes = useStyles();
+export default function AboutV2(props) {
     const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.up('lg'));
-    const extClassName = !matches?"about-card-slider-sm":"about-card-slider-lg"
+    const matches = useMediaQuery(theme.breakpoints.up('xm'));
+    console.log(props.location)
     return (
-        <Container
-            maxWidth="lg"
-            className={classes.container}
-            style={{ padding: 0 }}
-        >
-            <Grid container spacing={0} direction={matches ? "column" : "row"} className="fullHeight">
-                <Grid xs={12} sm={12} md={12} className="grid-center">
-                    <TopDownMainCard extClassName={extClassName} sm={!matches}/>
-                </Grid>
-                {
-                    matches? (
-                        <Grid xs={12} sm={12} md={12} className="grid-center">
-                            <PixalCard extClassName={extClassName}/>
-                        </Grid>
-                    ) : null
-                }
+        <Grid container spacing={0} direction={matches ? "column" : "row"} className="home-card-container-grid">
+            <Grid item xs={12} sm={12} md={12} lg={8} className="home-card-left-item">
+                <div className="home-intro-container about-intro-container">
+                    <h1 className="home-intro-text about-intro-text">
+                        <span>About Me!</span>
+                    </h1>
+                    <p>
+                        I am Titus Joyson. Living in Chennai and I am a Software Developer.
+                        I started with Python when I was doing my Bachelors Degree and also spend
+                        some significant time with JavaScript. I have good experience in developing
+                        Applications in Backend using Django, NodeJs and I have also developed
+                        Web sites using ReactJs and Mobile Applications using React Native.
+                        Nowadays I'm more into Machine Learning, Flutter and IOT. I also started learning Rust.
+                    </p>
+                    <h3>Get In Touch</h3>
+                    <p>
+                        Like to know more! Write a Mail to
+                        <a href={"mailto:" + config.EMAIL_ADDRESS}> tj.joyson@gamil.com</a> or send a request in
+                        <a href={config.LINKIDIN_PROFILE} target="_blank"> LinkedIn</a> and say hi.
+                    </p>
+                </div>
             </Grid>
-        </Container>
+            <Hidden mdDown>
+                <Grid item xs={12} sm={4} md={4} className="home-card-right-item">
+
+                </Grid>
+            </Hidden>
+        </Grid>
     )
-}
-
-
-class PixalCard extends React.Component {
-    render(){
-        const extClassName = this.props.extClassName;
-        return (
-            <div className={"bgBlack about-card-slider "+extClassName}>
-                <ParticleView />
-            </div>
-        )
-    }
-}
-
-
-class TopDownMainCard extends React.Component {
-    constructor() {
-        super()
-        this.data = [
-            {
-                "title": "About Me",
-                "quote": context.aboutMe,
-            },
-            {
-                "title": "Get In Touch",
-                "quote": context.getInTouch
-            }
-        ]
-    }
-
-    _renderCard = (data) => {
-        let containerClass = "about-card-slider-item";
-        if(this.props.sm == true){
-            containerClass += " about-card-slider-item-sm"
-        }
-        return (
-            <div className={containerClass}>
-                <blockquote>
-                    <h2>{data.title}</h2>
-                    <p>{data.quote}</p>
-                </blockquote>
-            </div>
-        )
-    }
-
-    render() {
-        var settings = {
-            dots: true,
-            infinite: true,
-            speed: 1000,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            totalSlides: this.data.length,
-            arrows: false,
-            autoplay: false,
-            vertical: false
-        };
-        const extClassName = this.props.extClassName;
-        return (
-            <div className={"bgBlack about-card-slider "+extClassName}>
-                <Slider {...settings}>
-                    {this.data.map(this._renderCard)}
-                </Slider>
-            </div>
-        )
-    }
 }
