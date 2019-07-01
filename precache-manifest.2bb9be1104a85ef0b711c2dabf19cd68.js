@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e3b150dcf11edf8d10f8068d5a1c05d",
+    "revision": "ad23e765fd42e8727c8cf404fa595b56",
     "url": "/titusjoyson/titusjoyson.github.com/index.html"
   },
   {
-    "revision": "b754ca93b02933eb5061",
-    "url": "/titusjoyson/titusjoyson.github.com/static/css/main.c0fa19c0.chunk.css"
+    "revision": "00add5707a709426ea87",
+    "url": "/titusjoyson/titusjoyson.github.com/static/css/main.b645ca98.chunk.css"
   },
   {
-    "revision": "236e6ab03f7dba701da0",
-    "url": "/titusjoyson/titusjoyson.github.com/static/js/2.6f3bc17b.chunk.js"
+    "revision": "7e7584179bb6ce9a8f48",
+    "url": "/titusjoyson/titusjoyson.github.com/static/js/2.6ec691bf.chunk.js"
   },
   {
-    "revision": "b754ca93b02933eb5061",
-    "url": "/titusjoyson/titusjoyson.github.com/static/js/main.db81d167.chunk.js"
+    "revision": "00add5707a709426ea87",
+    "url": "/titusjoyson/titusjoyson.github.com/static/js/main.9b522a96.chunk.js"
   },
   {
     "revision": "05c163cd02ba44377671",
