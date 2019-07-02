@@ -10,6 +10,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import config from '../../config';
+import ReactGA from 'react-ga';
 
 
 const useStyles = makeStyles({
@@ -41,6 +42,10 @@ export default function ProjectCard() {
     // const matches = useMediaQuery(theme.breakpoints.up('xm'));
     const handleAcClick = (link = null) => {
         if (link != null) {
+            ReactGA.event({
+                category: 'User',
+                action: 'Clicked on ProjectCard '+ link
+            });
             let win = window.open(link, '_blank');
             win.focus();
         }

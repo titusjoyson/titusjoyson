@@ -9,6 +9,7 @@ import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
 import Icon from '@material-ui/core/Icon';
 import config from '../../config';
 import { withRouter } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 
 const styles = theme => ({
@@ -65,6 +66,10 @@ class SpeedDials extends React.Component {
             open: !state.open,
         }));
         if (link != null) {
+            ReactGA.event({
+                category: 'User',
+                action: 'Clicked on footer speeddialer '+ link
+            });
             var win = window.open(link, '_blank');
             win.focus();
         }

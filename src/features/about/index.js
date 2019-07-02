@@ -5,22 +5,22 @@ import { useTheme } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import config from '../../config';
+import ReactGA from 'react-ga';
 
 
-const useStyles = makeStyles({
-    container: {
-        display: "flex",
-        flexGrow: 1,
-        justifyContent: "flex-end",
-        alignItems: "center",
-        height: "inherit",
-    }
-});
-
-export default function AboutV2(props) {
+function AboutV2(props) {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('xm'));
-    console.log(props.location)
+
+    const handleAcClick = (link = null) => {
+        if (link != null) {
+            ReactGA.event({
+                category: 'User',
+                action: 'Clicked on about page '+ link
+            });
+        }
+    };
+
     return (
         <Grid container spacing={0} direction={matches ? "column" : "row"} className="home-card-container-grid">
             <Grid item xs={12} sm={12} md={12} lg={8} className="home-card-left-item fadein">
@@ -39,8 +39,8 @@ export default function AboutV2(props) {
                     <h3>Get In Touch</h3>
                     <p>
                         Like to know more! Write a Mail to
-                        <a href={"mailto:" + config.EMAIL_ADDRESS}> tj.joyson@gamil.com</a> or send a request in
-                        <a href={config.LINKIDIN_PROFILE} target="_blank"> LinkedIn</a> and say hi.
+                        <a href={"mailto:" + config.EMAIL_ADDRESS} onClick={()=>handleAcClick(config.EMAIL_ADDRESS)}> tj.joyson@gamil.com</a> or send a request in
+                        <a href={config.LINKIDIN_PROFILE} target="_blank" onClick={()=>handleAcClick(config.LINKIDIN_PROFILE)}> LinkedIn</a> and say hi.
                     </p>
                 </div>
             </Grid>
@@ -51,4 +51,15 @@ export default function AboutV2(props) {
             </Hidden>
         </Grid>
     )
+}
+
+export default class AboutV2Wrap extends React.Component{
+
+    componentDidMount(){
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+
+    render(){
+        return <AboutV2/>
+    }
 }

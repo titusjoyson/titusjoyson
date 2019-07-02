@@ -7,6 +7,9 @@ import './themes/layout.css';
 import './themes/animatons.css';
 import App from './navigation';
 import * as serviceWorker from './serviceWorker';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-143162794-1');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

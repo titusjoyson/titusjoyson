@@ -6,6 +6,7 @@ import Moon from '../../components/card/moon';
 import Particles from 'react-particles-js';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import ReactGA from 'react-ga';
 
 
 const useStyles = makeStyles({
@@ -23,7 +24,7 @@ const useStyles = makeStyles({
     },
 });
 
-export default function Home() {
+function Home() {
     const theme = useTheme();
     const classes = useStyles();
     const matches = useMediaQuery(theme.breakpoints.up('md'));
@@ -36,4 +37,15 @@ export default function Home() {
             <HomeCardV2/>
         </Container>
     )
+}
+
+export default class HomeWraper extends React.Component {
+
+    componentDidMount(){
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+
+    render(){
+        return <Home/>
+    }
 }
