@@ -40,7 +40,8 @@ class SubTitleSlide extends React.Component {
             "Welcome to my new webiste!",
             "I code backend, frontend and mobile app's",
             "I like to travel and code",
-            "Like to connect, send an email or say 'hi' on LinkedIn"
+            "Like to connect, send an email or say 'hi' on LinkedIn",
+            ""
         ]
     }
 
