@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Motion, spring } from 'react-motion';
-import { Link } from 'react-router-dom';
 import { range } from 'lodash';
 
 const springSetting1 = { stiffness: 180, damping: 10 };
@@ -12,10 +11,6 @@ function reinsert(arr, from, to) {
     _arr.splice(from, 1);
     _arr.splice(to, 0, val);
     return _arr;
-}
-
-function clamp(n, min, max) {
-    return Math.max(Math.min(n, max), min);
 }
 
 const [count, width, height] = [1, 70, 90];
@@ -118,31 +113,15 @@ export default class MotonButton extends React.Component {
                     }
                     if (!this.initialXY) this.initialXY = [x, y]
                     return (
-                        <Link to={window.location.pathname == "/about" ? "/" : "/about"}>
-                            <Motion key={key} style={style} onPress={() => {
-                                if (window.location.pathname == "/about") {
 
-                                } else {
-
-                                }
-                            }}>
-                                {({ translateX, translateY, scale, boxShadow }) =>
-                                    <div
-                                        onMouseDown={this.handleMouseDown.bind(null, key, [x, y])}
-                                        onTouchStart={this.handleTouchStart.bind(null, key, [x, y])}
-                                        className={"motion-button " + motonButtonClass}
-                                        style={{
-                                            WebkitTransform: `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`,
-                                            transform: `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`,
-                                            zIndex: key === lastPress ? 99 : visualPosition,
-                                            boxShadow: `${boxShadow}px 5px 5px rgba(0,0,0,0.5)`,
-                                        }}
-                                    >
-                                        <i className="material-icons">keyboard_arrow_left</i>
-                                    </div>
-                                }
-                            </Motion>
-                        </Link>
+                        <div
+                            onClick={() => {
+                                this.props.onPress()
+                            }}
+                            className={"motion-button " + motonButtonClass}
+                        >
+                            <i className="material-icons">keyboard_arrow_left</i>
+                        </div>
                     );
                 })}
             </div>
@@ -151,5 +130,6 @@ export default class MotonButton extends React.Component {
 }
 
 MotonButton.defaultProps = {
-    motonButtonClass: ""
+    motonButtonClass: "",
+    onPress: () => { alert(2) }
 }

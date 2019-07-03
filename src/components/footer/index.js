@@ -13,7 +13,7 @@ import Fade from 'react-reveal/Fade';
 import ReactGA from 'react-ga';
 
 
-export default function Footer() {
+export default function Footer(props) {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('sm'));
     const [hideMotionButton, setHideMotionButton] = useState(false);
@@ -45,6 +45,9 @@ export default function Footer() {
                         <MotionButton
                             motonButtonClass={matches === true ? "motion-button-small" : "motion-button-large"}
                             hidden={hideMotionButton}
+                            onPress={()=>{
+                                props.onPress()
+                            }}
                         />
                     </Fade>
                     <Hidden smDown>
