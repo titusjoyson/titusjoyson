@@ -43,6 +43,7 @@ function AboutV2(props) {
                         <a href={config.LINKIDIN_PROFILE} target="_blank" onClick={()=>handleAcClick(config.LINKIDIN_PROFILE)}> LinkedIn</a> and say hi.
                     </p>
                 </div>
+                <div></div>
             </Grid>
             <Hidden mdDown>
                 <Grid item xs={12} sm={4} md={4} className="home-card-right-item">

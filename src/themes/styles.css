@@ -85,7 +85,8 @@ body, #root {
 .home-card-left-item {
     display: inherit;
     justify-content: center;
-    align-items: flex-start
+    align-items: flex-start;
+    flex-direction: row
 }
 
 .home-card-right-item {
@@ -422,6 +423,11 @@ body, #root {
 
 .project-card-item-header hr {
     margin-top: 20px
+}
+
+.about-intro-container{
+    max-height: 80%;
+    overflow: auto;
 }
 
 .about-intro-container p {
