@@ -8,7 +8,6 @@ import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
 import Icon from '@material-ui/core/Icon';
 import config from '../../config';
-import { withRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 
@@ -153,4 +152,4 @@ SpeedDials.propTypes = {
 };
 
 
-export default withRouter(withStyles(styles)(SpeedDials));
+export default withStyles(styles)(SpeedDials);
