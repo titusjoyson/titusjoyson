@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/titusjoyson/titusjoyson.github.com/static/css/main.5bc0659b.chunk.css",
-    "main.js": "/titusjoyson/titusjoyson.github.com/static/js/main.d551aa8e.chunk.js",
-    "main.js.map": "/titusjoyson/titusjoyson.github.com/static/js/main.d551aa8e.chunk.js.map",
+    "main.css": "/titusjoyson/titusjoyson.github.com/static/css/main.141e3ec5.chunk.css",
+    "main.js": "/titusjoyson/titusjoyson.github.com/static/js/main.49db487f.chunk.js",
+    "main.js.map": "/titusjoyson/titusjoyson.github.com/static/js/main.49db487f.chunk.js.map",
     "runtime~main.js": "/titusjoyson/titusjoyson.github.com/static/js/runtime~main.c043e4c8.js",
     "runtime~main.js.map": "/titusjoyson/titusjoyson.github.com/static/js/runtime~main.c043e4c8.js.map",
-    "static/js/2.11953626.chunk.js": "/titusjoyson/titusjoyson.github.com/static/js/2.11953626.chunk.js",
-    "static/js/2.11953626.chunk.js.map": "/titusjoyson/titusjoyson.github.com/static/js/2.11953626.chunk.js.map",
+    "static/js/2.31e1a508.chunk.js": "/titusjoyson/titusjoyson.github.com/static/js/2.31e1a508.chunk.js",
+    "static/js/2.31e1a508.chunk.js.map": "/titusjoyson/titusjoyson.github.com/static/js/2.31e1a508.chunk.js.map",
     "index.html": "/titusjoyson/titusjoyson.github.com/index.html",
-    "precache-manifest.077335a364cd8babead7bef072bca14a.js": "/titusjoyson/titusjoyson.github.com/precache-manifest.077335a364cd8babead7bef072bca14a.js",
+    "precache-manifest.648755a1686acc5caa6ebca74dc42944.js": "/titusjoyson/titusjoyson.github.com/precache-manifest.648755a1686acc5caa6ebca74dc42944.js",
     "service-worker.js": "/titusjoyson/titusjoyson.github.com/service-worker.js",
-    "static/css/main.5bc0659b.chunk.css.map": "/titusjoyson/titusjoyson.github.com/static/css/main.5bc0659b.chunk.css.map",
+    "static/css/main.141e3ec5.chunk.css.map": "/titusjoyson/titusjoyson.github.com/static/css/main.141e3ec5.chunk.css.map",
     "static/media/styles.css": "/titusjoyson/titusjoyson.github.com/static/media/intro.a691ab8a.jpg"
   }
 }
