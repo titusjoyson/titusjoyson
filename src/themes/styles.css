@@ -109,7 +109,8 @@ body, #root {
 
 .home-intro-text-sli-wrap {
     height: 40px;
-    margin-top: 60px
+    margin-top: 60px;
+    max-width: inherit;
 }
 
 .home-intro-text-sli-container {

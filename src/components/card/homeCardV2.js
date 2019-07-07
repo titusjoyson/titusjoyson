@@ -18,9 +18,7 @@ export default function HomeCardV2() {
                         <span>Hi! I'm Titus Joyson, </span>
                         <span>an Software Developer based in Chennai.</span>
                     </h1>
-                    <div>
-                        <SubTitleSlide />
-                    </div>
+                    <SubTitleSlide />
                     <ProjectCard />
                 </div>
             </Grid>
