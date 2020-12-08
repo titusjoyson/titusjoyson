@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/titusjoyson/titusjoyson.github.com/static/css/main.f4219050.chunk.css",
-    "main.js": "/titusjoyson/titusjoyson.github.com/static/js/main.0ab4dc80.chunk.js",
-    "main.js.map": "/titusjoyson/titusjoyson.github.com/static/js/main.0ab4dc80.chunk.js.map",
-    "runtime~main.js": "/titusjoyson/titusjoyson.github.com/static/js/runtime~main.c043e4c8.js",
-    "runtime~main.js.map": "/titusjoyson/titusjoyson.github.com/static/js/runtime~main.c043e4c8.js.map",
-    "static/js/2.31e1a508.chunk.js": "/titusjoyson/titusjoyson.github.com/static/js/2.31e1a508.chunk.js",
-    "static/js/2.31e1a508.chunk.js.map": "/titusjoyson/titusjoyson.github.com/static/js/2.31e1a508.chunk.js.map",
+    "main.css": "/titusjoyson/titusjoyson.github.com/static/css/main.67a0ed8a.chunk.css",
+    "main.js": "/titusjoyson/titusjoyson.github.com/static/js/main.11339873.chunk.js",
+    "main.js.map": "/titusjoyson/titusjoyson.github.com/static/js/main.11339873.chunk.js.map",
+    "runtime-main.js": "/titusjoyson/titusjoyson.github.com/static/js/runtime-main.2d5957d9.js",
+    "runtime-main.js.map": "/titusjoyson/titusjoyson.github.com/static/js/runtime-main.2d5957d9.js.map",
+    "static/js/2.135e3ec2.chunk.js": "/titusjoyson/titusjoyson.github.com/static/js/2.135e3ec2.chunk.js",
+    "static/js/2.135e3ec2.chunk.js.map": "/titusjoyson/titusjoyson.github.com/static/js/2.135e3ec2.chunk.js.map",
     "index.html": "/titusjoyson/titusjoyson.github.com/index.html",
-    "precache-manifest.fda74a7689072f0659f06a0d71bcf0d8.js": "/titusjoyson/titusjoyson.github.com/precache-manifest.fda74a7689072f0659f06a0d71bcf0d8.js",
-    "service-worker.js": "/titusjoyson/titusjoyson.github.com/service-worker.js",
-    "static/css/main.f4219050.chunk.css.map": "/titusjoyson/titusjoyson.github.com/static/css/main.f4219050.chunk.css.map",
-    "static/media/styles.css": "/titusjoyson/titusjoyson.github.com/static/media/intro.a691ab8a.jpg"
-  }
+    "static/css/main.67a0ed8a.chunk.css.map": "/titusjoyson/titusjoyson.github.com/static/css/main.67a0ed8a.chunk.css.map",
+    "static/js/2.135e3ec2.chunk.js.LICENSE.txt": "/titusjoyson/titusjoyson.github.com/static/js/2.135e3ec2.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/titusjoyson/titusjoyson.github.com/static/media/intro.99ec98a4.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d5957d9.js",
+    "static/js/2.135e3ec2.chunk.js",
+    "static/css/main.67a0ed8a.chunk.css",
+    "static/js/main.11339873.chunk.js"
+  ]
 }
