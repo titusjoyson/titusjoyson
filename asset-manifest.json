@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/titusjoyson/titusjoyson.github.com/static/css/main.67a0ed8a.chunk.css",
-    "main.js": "/titusjoyson/titusjoyson.github.com/static/js/main.11339873.chunk.js",
-    "main.js.map": "/titusjoyson/titusjoyson.github.com/static/js/main.11339873.chunk.js.map",
-    "runtime-main.js": "/titusjoyson/titusjoyson.github.com/static/js/runtime-main.2d5957d9.js",
-    "runtime-main.js.map": "/titusjoyson/titusjoyson.github.com/static/js/runtime-main.2d5957d9.js.map",
-    "static/js/2.135e3ec2.chunk.js": "/titusjoyson/titusjoyson.github.com/static/js/2.135e3ec2.chunk.js",
-    "static/js/2.135e3ec2.chunk.js.map": "/titusjoyson/titusjoyson.github.com/static/js/2.135e3ec2.chunk.js.map",
-    "index.html": "/titusjoyson/titusjoyson.github.com/index.html",
-    "static/css/main.67a0ed8a.chunk.css.map": "/titusjoyson/titusjoyson.github.com/static/css/main.67a0ed8a.chunk.css.map",
-    "static/js/2.135e3ec2.chunk.js.LICENSE.txt": "/titusjoyson/titusjoyson.github.com/static/js/2.135e3ec2.chunk.js.LICENSE.txt",
-    "static/media/styles.css": "/titusjoyson/titusjoyson.github.com/static/media/intro.99ec98a4.jpg"
+    "main.css": "/titusjoyson.github.com/static/css/main.2d0ac3b6.chunk.css",
+    "main.js": "/titusjoyson.github.com/static/js/main.49cbc02d.chunk.js",
+    "main.js.map": "/titusjoyson.github.com/static/js/main.49cbc02d.chunk.js.map",
+    "runtime-main.js": "/titusjoyson.github.com/static/js/runtime-main.881fef45.js",
+    "runtime-main.js.map": "/titusjoyson.github.com/static/js/runtime-main.881fef45.js.map",
+    "static/js/2.135e3ec2.chunk.js": "/titusjoyson.github.com/static/js/2.135e3ec2.chunk.js",
+    "static/js/2.135e3ec2.chunk.js.map": "/titusjoyson.github.com/static/js/2.135e3ec2.chunk.js.map",
+    "index.html": "/titusjoyson.github.com/index.html",
+    "static/css/main.2d0ac3b6.chunk.css.map": "/titusjoyson.github.com/static/css/main.2d0ac3b6.chunk.css.map",
+    "static/js/2.135e3ec2.chunk.js.LICENSE.txt": "/titusjoyson.github.com/static/js/2.135e3ec2.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/titusjoyson.github.com/static/media/intro.99ec98a4.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2d5957d9.js",
+    "static/js/runtime-main.881fef45.js",
     "static/js/2.135e3ec2.chunk.js",
-    "static/css/main.67a0ed8a.chunk.css",
-    "static/js/main.11339873.chunk.js"
+    "static/css/main.2d0ac3b6.chunk.css",
+    "static/js/main.49cbc02d.chunk.js"
   ]
 }
