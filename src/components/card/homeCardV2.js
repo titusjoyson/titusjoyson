@@ -35,10 +35,10 @@ export default function HomeCardV2() {
 class SubTitleSlide extends React.Component {
     state = {
         data: [
-            "Welcome to my new webiste!",
+            "Welcome to my webpage!",
             "I code backend, frontend and mobile app's",
-            "I like to travel and code",
-            "Like to connect, send an email or say 'hi' on LinkedIn",
+            "Like to know more",
+            "Let's chat, send an email or say 'hi' on LinkedIn",
             ""
         ]
     }

@@ -37,7 +37,7 @@ export default function Footer(props) {
                 className='footer'
             >
                 <div className="eight columns footer-left-item">
-                    <p>Copyrights © 2019 - Titus Joyson<br />
+                    <p>Copyrights © 2020 - Titus Joyson<br />
                         <a href="mailto:tj.joyson@gmail.com">tj.joyson@gmail.com</a></p>
                 </div>
                 <div className="footer-right-item">

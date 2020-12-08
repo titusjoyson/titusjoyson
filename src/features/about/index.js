@@ -29,12 +29,13 @@ function AboutV2(props) {
                         <span>About Me!</span>
                     </h1>
                     <p>
-                        I am Titus Joyson. Living in Chennai and I am a Software Developer.
+                        I am Titus Joyson. Living in Chennai and I am a Software Engineer.
                         I started with Python when I was doing my Bachelors Degree and also spend
                         some significant time with JavaScript. I have good experience in developing
                         Applications in Backend using Django, NodeJs and I have also developed
                         Web sites using ReactJs and Mobile Applications using React Native.
-                        Nowadays I'm more into Machine Learning, Flutter and IOT. I also started learning Rust.
+                        Nowadays I'm more into Machine Learning, Flutter and IOT. 
+                        I also started working with GoLang.
                     </p>
                     <h3>Get In Touch</h3>
                     <p>
